@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "4affcf09-8573-44a2-9e07-00b61465826b",
+		"name": "API Gateway (Microservice Arch)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41965744"
+	},
+	"item": [
+		{
+			"name": "Get order microservice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:8083/api/order/1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
