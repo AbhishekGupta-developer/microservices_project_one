@@ -7,24 +7,85 @@
 	},
 	"item": [
 		{
-			"name": "Get order microservice",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}:8083/api/order/1",
-					"host": [
-						"{{host}}"
-					],
-					"port": "8083",
-					"path": [
-						"api",
-						"order",
-						"1"
-					]
+			"name": "Microservice-1 (invoice)",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081",
+							"host": [
+								"localhost"
+							],
+							"port": "8081"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Server status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "Calling Service-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api-gateway/invoice/",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api-gateway",
+								"invoice",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calling Service-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api-gateway/order/",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api-gateway",
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
